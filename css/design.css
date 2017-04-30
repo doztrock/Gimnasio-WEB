@@ -1,0 +1,89 @@
+/**
+  * Diseno de interfaz
+  *
+  * Por Ivan Botero
+  */
+
+
+/** 
+  * ELEMENTOS COMUNES 
+  */
+
+/* Elemento: body */
+body{
+    background-color: #3498DB;
+}
+
+/* Boton que se encuentre en el menu principal */
+.boton_menu_principal {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+}
+
+
+/** 
+  * INTERFAZ PRINCIPAL 
+  */
+
+/* Contenedor */
+#contenedor{
+}
+
+/* Panel Izquierdo */
+#panel_izquierdo{
+    display: inline-block;
+}
+
+/* Panel Central */
+#panel_central{
+    display: inline-block;
+    text-align: center;
+}
+
+/* Panel Derecho */
+#panel_derecho{
+    display: inline-block;
+}
+
+/* Boton: Registrar Cliente */
+#btn_registrar_cliente{
+    background: url(../img/icono-registrar-cliente.png);
+    background-repeat: no-repeat;
+}
+
+/* Boton: Registrar Medidas */
+#btn_registrar_medidas{
+    background: url(../img/icono-registrar-medidas.png);
+    background-repeat: no-repeat;
+}
+
+/* Boton: Registrar Servicio */
+#btn_registrar_servicio{
+    background: url(../img/icono-registrar-servicio.png);
+    background-repeat: no-repeat;
+}
+
+/* Boton: Imprimir Rutina */
+#btn_imprimir_rutina{
+    background: url(../img/icono-imprimir-rutina.png);
+    background-repeat: no-repeat;
+}
+
+/* Boton: Registrar Rutina */
+#btn_registrar_rutina{
+    background: url(../img/icono-registrar-rutina.png);
+    background-repeat: no-repeat;
+}
+
+/* Boton: Modificar Rutina */
+#btn_modificar_rutina{
+    background: url(../img/icono-modificar-rutina.png);
+    background-repeat: no-repeat;
+}
+
+/* Boton: Consultar Cliente */
+#btn_consultar_cliente{
+    background: url(../img/icono-consultar-cliente.png);
+    background-repeat: no-repeat;
+}
