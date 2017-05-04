@@ -4,13 +4,40 @@
 			
 			$(document).ready(function(){
 				
+				/**
+				  * Boton Registrar
+				  */
+				  $("#boton_registrar").click(function(){
+				  		
+				  		$("#div_cargando").show();
+
+				  		$.ajax({
+				  			url: "proceso/InterfazRegistroCliente.process.php",
+				  			type: "POST",
+				  			cache: false,
+				  			data: $('#formulario_registro_cliente').serialize(),
+				  			success: function(data){
+				  				alert(data);
+				  				$("#div_cargando").hide();
+				  			}
+				  		});
+
+				  });
+
+				/**
+				  * Boton Cancelar
+				  */
+				  $("#boton_cancelar").click(function(){
+						$("#contenedor").load("interfaz/InterfazGimnasio.php");	  	
+				  });
+
 			});
 
 		</script>
 	</head>
 	<body>
 	
-		<form>
+		<form id="formulario_registro_cliente">
 			
 			<div>
 
@@ -68,8 +95,17 @@
 
 			</div>
 
-			<input type="button" class="boton_formulario_negativo" id="boton_cancelar" name="boton_cancelar" value="Cancelar">
-			<input type="button" class="boton_formulario_positivo" id="boton_registrar" name="boton_registrar" value="Registrar">
+			<div>
+				<input type="button" class="boton_formulario_negativo" id="boton_cancelar" name="boton_cancelar" value="Cancelar">
+			</div>
+
+			<div>
+				<input type="button" class="boton_formulario_positivo" id="boton_registrar" name="boton_registrar" value="Registrar">
+			</div>
+
+			<div id="div_cargando" style="display: none">
+				CARGANDO...
+			</div>
 
 		</form>
 
