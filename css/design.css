@@ -5,21 +5,96 @@
   */
 
 
+
 /** 
   * ELEMENTOS COMUNES 
   */
 
-/* Elemento: body */
+/**
+  * Etiquetas HTML
+  */
+
+/* Etiqueta: body */
 body{
     background-color: #3498DB;
 }
 
-/* Boton que se encuentre en el menu principal */
+/**
+  * Botones 
+  */
+
+/**
+  * Boton que se encuentre en el menu principal 
+  */
 .boton_menu_principal {
     width: 150px;
     height: 150px;
     border-radius: 25px;
 }
+
+/**
+  * Boton que se encuentra en el formulario indicando una accion 
+  * que conlleva a algo que tenga relacion al almacenamiento de
+  * informacion. Es decir (Actualizacion, Guardado)
+  */
+.boton_formulario_positivo {
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    background-color: #4CAF50;
+}
+
+/**
+  * Boton que se encuentra en el formulario indicando una accion 
+  * que NO conlleva a algo que tenga relacion al almacenamiento de
+  * informacion. Es decir (Cancelacion, Eliminacion, Reestablececimiento)
+  */
+.boton_formulario_negativo {
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    background-color: #E74C3C;
+}
+
+/**
+  * Labels 
+  */
+
+/** 
+  * Label que se encuentra en los formularios al lado del campo de texto
+  */
+.label_formulario {
+    font-size: 25px;
+}
+
+/**
+  * Inputs 
+  */
+
+/**
+  * Caja de texto que se encuentra en los formularios 
+  */
+.input_formulario {
+    width: 135px;
+    height: 25px;
+    font-size: larger;
+}
+
+/**
+  * Selects 
+  */
+
+/**
+  * Select que se encuentra en los formularios 
+  */
+.select_formulario {
+    width: 135px;
+    height: 25px;
+    font-size: larger;
+}
+
 
 
 /** 
