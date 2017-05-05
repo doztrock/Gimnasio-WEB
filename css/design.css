@@ -16,7 +16,7 @@
 
 /* Etiqueta: body */
 body{
-    background-color: #3498DB;
+    background-color: #363636;
 }
 
 /**
@@ -26,10 +26,15 @@ body{
 /**
   * Boton que se encuentre en el menu principal 
   */
-.boton_menu_principal {
-    width: 150px;
-    height: 150px;
+.boton_menu_principal{
+    width: 170px;
+    height: 170px;
     border-radius: 25px;
+    text-align: center;
+    padding-top: 85%;
+    font-size: 15px;
+    color: white;
+    background-position: center !important;
 }
 
 /**
@@ -37,7 +42,7 @@ body{
   * que conlleva a algo que tenga relacion al almacenamiento de
   * informacion. Es decir (Actualizacion, Guardado)
   */
-.boton_formulario_positivo {
+.boton_formulario_positivo{
     width: 150px;
     height: 45px;
     border-radius: 10px;
@@ -50,7 +55,7 @@ body{
   * que NO conlleva a algo que tenga relacion al almacenamiento de
   * informacion. Es decir (Cancelacion, Eliminacion, Reestablececimiento)
   */
-.boton_formulario_negativo {
+.boton_formulario_negativo{
     width: 150px;
     height: 45px;
     border-radius: 10px;
@@ -65,7 +70,7 @@ body{
 /** 
   * Label que se encuentra en los formularios al lado del campo de texto
   */
-.label_formulario {
+.label_formulario{
     font-size: 25px;
 }
 
@@ -76,7 +81,7 @@ body{
 /**
   * Caja de texto que se encuentra en los formularios 
   */
-.input_formulario {
+.input_formulario{
     width: 135px;
     height: 25px;
     font-size: larger;
@@ -89,10 +94,22 @@ body{
 /**
   * Select que se encuentra en los formularios 
   */
-.select_formulario {
+.select_formulario{
     width: 135px;
     height: 25px;
     font-size: larger;
+}
+
+
+/**
+  * Titulos
+  */
+
+/**
+  * Titulo que encabeza los formularios
+  */
+.titulo_formulario{
+    font-size: 50px;
 }
 
 
@@ -103,6 +120,15 @@ body{
 
 /* Contenedor */
 #contenedor{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width: 45em;
+    height: 30em;
+    margin-top: -15em;
+    margin-left: -21em;
+    background-color: #2574A9;    
+    border-radius: 20px;
 }
 
 /* Panel Izquierdo */
