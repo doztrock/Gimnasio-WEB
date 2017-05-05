@@ -133,23 +133,23 @@ body{
 
 /* Contenedor de boton */
 .contenedor_boton{
-    padding: 22px 47px;
+    padding: 22px 73px;
 }
 
 /* Panel Izquierdo */
 #panel_izquierdo{
-    display: inline-block;
+    display: table-cell;
 }
 
 /* Panel Central */
 #panel_central{
-    display: inline-block;
-    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /* Panel Derecho */
 #panel_derecho{
-    display: inline-block;
+    display: table-cell;
 }
 
 /* Boton: Registrar Cliente */

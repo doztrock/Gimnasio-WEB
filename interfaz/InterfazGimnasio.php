@@ -73,7 +73,7 @@
         <!--Panel Central-->
         <div id="panel_central">
 
-            <div class="contenedor_boton">
+            <div class="">
                 <input type="button" id="btn_imprimir_rutina" class="boton_menu_principal" value="Imprimir Rutina">
             </div>
 
