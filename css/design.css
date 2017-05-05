@@ -51,6 +51,7 @@ body{
     border-radius: 10px;
     color: white;
     background-color: #4CAF50;
+    font-size: 20px;
 }
 
 /**
@@ -64,6 +65,7 @@ body{
     border-radius: 10px;
     color: white;
     background-color: #E74C3C;
+    font-size: 20px;
 }
 
 /**
@@ -134,9 +136,37 @@ body{
     border-radius: 20px;
 }
 
-/* Contenedor de boton */
-.contenedor_boton{
+/* Contenedor de boton en menu principal */
+.contenedor_boton_menu_principal{
     padding: 22px 73px;
+}
+
+/* Contenedor de titulo en formulario */
+.contenedor_titulo_formulario{
+    padding-top: 2em;
+    padding-left: 14em;
+}
+
+/* Contenedor de formulario */
+.contenedor_formulario{
+}
+
+/* Contenedor de botones en formulario */
+.contenedor_boton_formulario{
+    padding-top: 16em;
+    padding-left: 29em;
+}
+
+/* Contenedor de boton positivo */
+.contenedor_boton_positivo{
+    display: table-cell;
+    padding: 5px;
+}
+
+/* Contenedor de boton negativo */
+.contenedor_boton_negativo{
+    display: table-cell;
+    padding: 5px;
 }
 
 /* Panel Izquierdo */

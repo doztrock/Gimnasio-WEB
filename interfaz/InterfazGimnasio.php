@@ -58,13 +58,13 @@
         <!--Panel Izquierdo-->
         <div id="panel_izquierdo">
 
-            <div class="contenedor_boton">
+            <div class="contenedor_boton_menu_principal">
                 <input type="button" id="btn_registrar_cliente" class="boton_menu_principal" value="Registrar Cliente">
             </div>
-            <div class="contenedor_boton">
+            <div class="contenedor_boton_menu_principal">
                 <input type="button" id="btn_registrar_medidas" class="boton_menu_principal" value="Registrar Medidas">
             </div>
-            <div class="contenedor_boton">
+            <div class="contenedor_boton_menu_principal">
                 <input type="button" id="btn_registrar_servicio" class="boton_menu_principal" value="Registrar Servicio">
             </div>
 
@@ -82,13 +82,13 @@
         <!--Panel Derecho-->
         <div id="panel_derecho">
 
-            <div class="contenedor_boton">
+            <div class="contenedor_boton_menu_principal">
                 <input type="button" id="btn_registrar_rutina" class="boton_menu_principal" value="Registrar Rutina">
             </div>
-            <div class="contenedor_boton">
+            <div class="contenedor_boton_menu_principal">
                 <input type="button" id="btn_modificar_rutina" class="boton_menu_principal" value="Modificar Rutina">
             </div>
-            <div class="contenedor_boton">
+            <div class="contenedor_boton_menu_principal">
                 <input type="button" id="btn_consultar_cliente" class="boton_menu_principal" value="Consultar Cliente">
             </div>
 
