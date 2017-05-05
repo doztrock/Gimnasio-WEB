@@ -123,12 +123,17 @@ body{
     position:fixed;
     top: 50%;
     left: 50%;
-    width: 45em;
-    height: 30em;
-    margin-top: -15em;
-    margin-left: -21em;
+    width: 50em;
+    height: 40em;
+    margin-top: -20em;
+    margin-left: -25em;
     background-color: #2574A9;    
     border-radius: 20px;
+}
+
+/* Contenedor de boton */
+.contenedor_boton{
+    padding: 22px 47px;
 }
 
 /* Panel Izquierdo */
