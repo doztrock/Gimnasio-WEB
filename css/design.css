@@ -16,7 +16,9 @@
 
 /* Etiqueta: body */
 body{
-    background-color: #363636;
+    background:          url(../img/fondo.jpg);
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
 }
 
 /**
@@ -35,6 +37,7 @@ body{
     font-size: 15px;
     color: white;
     background-position: center !important;
+    background-color: #3D3E4A !important;
 }
 
 /**
@@ -127,7 +130,7 @@ body{
     height: 40em;
     margin-top: -20em;
     margin-left: -25em;
-    background-color: #2574A9;    
+    background-color: #203B4D;    
     border-radius: 20px;
 }
 
