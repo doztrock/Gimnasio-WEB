@@ -250,3 +250,39 @@ body{
     display: table-cell;
 }
 
+/**
+  * Buscador
+  */
+
+/* Contenedor del buscador */
+.contenedor_buscador{
+    border: 1px solid aliceblue;
+    margin-top: 10px;
+}
+
+/* Contenedor: Seccion busqueda*/
+.contenedor_seccion_busqueda{
+    display: table;
+    margin: 0px auto;
+}
+
+/* Contenedor del campo de busqueda */
+.caja_input_busqueda{
+    display: table-cell;
+}
+
+/* Caja de texto de busqueda */
+.input_busqueda{
+
+}
+
+/* Contenedor del boton de busqueda */
+.caja_boton_busqueda{
+    display: table-cell;
+}
+
+/* Boton de busqueda */
+.boton_busqueda{
+
+
+}
