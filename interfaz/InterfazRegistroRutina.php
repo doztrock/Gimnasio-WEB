@@ -31,6 +31,20 @@
                     $("#contenedor").load("interfaz/InterfazGimnasio.php");
                 });
 
+                /**
+                 *  Boton Buscar
+                 */
+                $("#boton_buscar").click(function () {
+                    $("#contenedor").load("interfaz/InterfazGimnasio.php");
+                });
+
+                /**
+                 * Datepicker
+                 */
+                $("#input_fecha").datepicker({
+                    dateFormat: 'yy-mm-dd'
+                });
+
             });
 
         </script>
@@ -51,7 +65,7 @@
                     <input type="text" class="input_busqueda" placeholder="Ingrese cedula o nombre">
                 </div>            
                 <div  class="caja_boton_busqueda">
-                    <input type="button" class="boton_busqueda" value="Buscar">   
+                    <input type="button" class="boton_busqueda" id="boton_buscar" name="boton_buscar" value="Buscar">   
                 </div>
             </div>
 
@@ -94,6 +108,15 @@
                         </div>
                         <div class="caja_input_formulario">
                             <input type="text" class="input_formulario" id="input_series" name="input_series">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="caja_label_formulario">
+                            <label class="label_formulario">Fecha:</label>
+                        </div>
+                        <div class="caja_input_formulario">
+                            <input type="text" class="input_formulario" id="input_fecha" name="input_fecha">
                         </div>
                     </div>
 
