@@ -77,6 +77,8 @@ body{
   */
 .label_formulario{
     font-size: 25px;
+    font-family: Verdana, Helvetica, sans-serif;
+    color: #C1C8D2 !important;
 }
 
 /**
@@ -113,8 +115,11 @@ body{
 /**
   * Titulo que encabeza los formularios
   */
+/**PENDIENTE: Alinear titulo en div*/
 .titulo_formulario{
     font-size: 50px;
+    font-family: Verdana, Helvetica, sans-serif;
+    color: #BAB210 !important
 }
 
 
@@ -149,12 +154,15 @@ body{
 
 /* Contenedor de formulario */
 .contenedor_formulario{
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 /* Contenedor de botones en formulario */
 .contenedor_boton_formulario{
-    padding-top: 16em;
-    padding-left: 29em;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
 
 /* Contenedor de boton positivo */
@@ -226,3 +234,19 @@ body{
     background: url(../img/icono-consultar-cliente.png);
     background-repeat: no-repeat;
 }
+
+/**
+  * Formularios
+  */
+
+/* Contenedor label en formulario */
+.caja_label_formulario{
+    display: table-cell;
+    width: 220px;
+}
+
+/* Contenedor input en formulario */
+.caja_input_formulario{
+    display: table-cell;
+}
+
