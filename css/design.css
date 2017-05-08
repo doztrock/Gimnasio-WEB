@@ -256,33 +256,61 @@ body{
 
 /* Contenedor del buscador */
 .contenedor_buscador{
-    border: 1px solid aliceblue;
     margin-top: 10px;
 }
 
 /* Contenedor: Seccion busqueda*/
 .contenedor_seccion_busqueda{
-    display: table;
-    margin: 0px auto;
+    position: absolute;
+    right: 0;
 }
 
 /* Contenedor del campo de busqueda */
 .caja_input_busqueda{
     display: table-cell;
+    padding-right: 2px;
 }
 
 /* Caja de texto de busqueda */
 .input_busqueda{
-
+    width: 225px;
+    height: 25px;
+    font-size: larger;
 }
 
 /* Contenedor del boton de busqueda */
 .caja_boton_busqueda{
     display: table-cell;
+    padding-left: 2px;
 }
 
 /* Boton de busqueda */
 .boton_busqueda{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: #4C89AF;
+    font-size: 20px;
+}
 
+/* Contenedor: Seccion resultado*/
+.contenedor_seccion_resultado{
+    padding-left: 30px;
+    position: absolute;
+    display: none;
+}
 
+/* Label donde se presenta el texto "Cliente" en la busqueda*/
+.label_resultado_etiqueta{
+    font-size: 20px;
+    font-family: Verdana, Helvetica, sans-serif;
+    color: #C1C8D2 !important;
+}
+
+/* Label donde se presenta el nombre del cliente*/
+.label_resultado_informacion{
+    font-size: 20px;
+    font-family: Verdana, Helvetica, sans-serif;
+    color: #39C630 !important;
 }

@@ -55,9 +55,10 @@
                 </div>
             </div>
 
-            <!--Seccion de resultados-->
-            <div>
-                <label>Cliente:</label><label>NOMBRE AQUI</label>
+            <!--Seccion de resultado-->
+            <div class="contenedor_seccion_resultado">
+                <label class="label_resultado_etiqueta">Cliente:</label>
+                <label class="label_resultado_informacion"></label>
             </div>
 
         </div>
