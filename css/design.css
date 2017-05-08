@@ -239,15 +239,21 @@ body{
   * Formularios
   */
 
-/* Contenedor label en formulario */
-.caja_label_formulario{
+/* Contenedor input en formulario */
+.caja_input_formulario{
+    display: table-cell;
+}
+
+/* Contenedor label en formulario: Registrar Cliente */
+#formulario_registro_cliente .caja_label_formulario{
     display: table-cell;
     width: 220px;
 }
 
-/* Contenedor input en formulario */
-.caja_input_formulario{
+/* Contenedor label en formulario: Registrar Rutina */
+#formulario_registro_rutina .caja_label_formulario{
     display: table-cell;
+    width: 120px;
 }
 
 /**
@@ -263,6 +269,7 @@ body{
 .contenedor_seccion_busqueda{
     position: absolute;
     right: 0;
+    padding-right: 10px;
 }
 
 /* Contenedor del campo de busqueda */
