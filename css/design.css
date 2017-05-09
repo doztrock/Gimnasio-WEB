@@ -256,6 +256,25 @@ body{
     width: 120px;
 }
 
+/* Contenedor label en formulario: Registrar Medidas */
+#formulario_registro_medidas .caja_label_formulario{
+    display: table-cell;
+    width: 120px;
+}
+
+/* Contenedor label en formulario: Modificar Rutina */
+#formulario_modificacion_rutina .caja_label_formulario{
+    display: table-cell;
+    width: 120px;
+}
+
+/* Contenedor label en formulario: Registrar Servicio */
+#formulario_registro_servicio .caja_label_formulario{
+    display: table-cell;
+    width: 120px;
+}
+
+
 /**
   * Buscador
   */

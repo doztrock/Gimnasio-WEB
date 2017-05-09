@@ -120,6 +120,9 @@
                         </div>
                     </div>
 
+                    <!--Identificador de Cliente-->
+                    <input type="hidden" id="hidden_identificador_cliente" name="hidden_identificador_cliente">
+
                 </div>
 
             </form>
