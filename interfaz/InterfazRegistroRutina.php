@@ -21,9 +21,9 @@
 
                             /** Mostramos el resultado */
                             if (data.resultado === true) {
-                                alert("Rutina registrada exitosamente.");
+                                alert("Rutina asignada exitosamente.");
                             } else {
-                                alert("Ocurrio un error registrando la rutina.");
+                                alert("Ocurrio un error asignando la rutina.");
                             }
 
                             /* Ocultamos la animacion de carga */

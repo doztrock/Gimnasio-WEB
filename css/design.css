@@ -102,7 +102,7 @@ body{
   * Select que se encuentra en los formularios 
   */
 .select_formulario{
-    width: 135px;
+    width: 260px;
     height: 25px;
     font-size: larger;
 }

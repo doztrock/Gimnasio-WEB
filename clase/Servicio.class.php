@@ -17,27 +17,20 @@ class Servicio {
      * o el nombre del cliente retorna un arreglo con la informacion respectiva.
      * PENDIENTE
      */
-    public function consultar($dato) {
-
-        $consulta = sprintf("SELECT cliente.identificador, cliente.cedula, cliente.nombre, cliente.edad "
-                . "FROM cliente "
-                . "WHERE cliente.cedula LIKE '%%%s%%' "
-                . "OR cliente.nombre LIKE '%%%s%%' "
-                . "LIMIT 1", $dato, $dato);
-
-        return $this->database->consulta($consulta)[0];
+    public function consultar($identificadorCliente) {
+        return NULL;
     }
 
     /**
      * Se encarga de realizar el almacenamiento de la informacion 
-     * de la rutina en la base de datos.
+     * del servicio en la base de datos.
      */
-    public function registrar() {
+    public function registrar($servicio, $identificadorCliente) {
 
-        $consulta = sprintf("INSERT INTO cliente "
-                . "(cedula, nombre, genero, tipo_sangre, edad, direccion, telefono, eps) "
+        $consulta = sprintf("INSERT INTO servicio "
+                . "(servicio, id_cliente) "
                 . "VALUES "
-                . "('%s', '%s', '%s', '%s', %d, '%s', '%s', '%s')", $cedula, $nombre, $genero, $tipoSangre, $edad, $telefono, $direccion, $eps);
+                . "('%s', %d)", $servicio, $identificadorCliente);
 
         return $this->database->consulta($consulta);
     }

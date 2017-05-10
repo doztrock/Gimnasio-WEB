@@ -81,6 +81,21 @@ class Libreria {
      * SERVICIO
      * 
      */
+
+    /**
+     * Consulta de servicio
+     */
+    public function consultarServicio($identificadorCliente) {
+        return $this->servicio->consultar($identificadorCliente);
+    }
+
+    /**
+     * Registro de servicio
+     */
+    public function registrarServicio($servicio, $identificadorCliente) {
+        return $this->servicio->registrar($servicio, $identificadorCliente);
+    }
+
 }
 
 ?>

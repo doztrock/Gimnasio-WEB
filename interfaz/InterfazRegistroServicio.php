@@ -9,16 +9,26 @@
                  */
                 $("#boton_registrar").click(function () {
 
+                    /* Mostramos la animacion de carga */
                     $(".div_cargando").show();
 
                     $.ajax({
-                        url: "proceso/InterfazRegistroRutina.process.php",
+                        url: "proceso/InterfazRegistroServicio.process.php",
                         type: "POST",
                         cache: false,
-                        data: $('#formulario_registro_rutina').serialize(),
+                        data: $('#formulario_registro_servicio').serialize(),
                         success: function (data) {
-                            //alert(data);
+
+                            /** Mostramos el resultado */
+                            if (data.resultado === true) {
+                                alert("Servicio asignado exitosamente.");
+                            } else {
+                                alert("Ocurrio un error asignando el servicio.");
+                            }
+
+                            /* Ocultamos la animacion de carga */
                             $(".div_cargando").hide();
+
                         }
                     });
 
@@ -63,13 +73,6 @@
 
                 });
 
-                /**
-                 * Datepicker
-                 */
-                $("#input_fecha").datepicker({
-                    dateFormat: 'yy-mm-dd'
-                });
-
             });
 
         </script>
@@ -78,7 +81,7 @@
 
         <!--Titulo-->
         <div class="contenedor_titulo_formulario">
-            <a class="titulo_formulario">Registrar Rutina</a>
+            <a class="titulo_formulario">Registrar Servicio</a>
         </div>
 
         <!--Buscador-->
@@ -105,43 +108,21 @@
         <!--Formulario-->
         <div class="contenedor_formulario">
 
-            <form id="formulario_registro_rutina">
+            <form id="formulario_registro_servicio">
 
                 <div>
 
                     <div>
                         <div class="caja_label_formulario">
-                            <label class="label_formulario">Area:</label>
+                            <label class="label_formulario">Servicio:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="caja_label_formulario">
-                            <label class="label_formulario">Peso:</label>
-                        </div>
-                        <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_peso" name="input_peso">
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="caja_label_formulario">
-                            <label class="label_formulario">Series:</label>
-                        </div>
-                        <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_series" name="input_series">
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="caja_label_formulario">
-                            <label class="label_formulario">Fecha:</label>
-                        </div>
-                        <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_fecha" name="input_fecha">
+                            <select class="select_formulario" id="combo_servicio" name="combo_servicio">
+                                <option value="Aumento de Masa Muscular">Aumento de Masa Muscular</option>
+                                <option value="Aumento de Peso">Aumento de Peso</option>
+                                <option value="Condicionamiento Fisico">Condicionamiento Fisico</option>                                
+                                <option value="Disminucion de Peso">Disminucion de Peso</option>
+                            </select>
                         </div>
                     </div>
 
