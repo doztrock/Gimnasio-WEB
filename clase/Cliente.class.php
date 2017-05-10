@@ -1,16 +1,30 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+require_once '../database/Database.class.php';
 
-/**
- * Description of Cliente
- *
- * @author Ivan
- */
 class Cliente {
-    //put your code here
+
+    /** Conexion a MySQL */
+    private $database = NULL;
+
+    public function __construct(Database $database) {
+        $this->database = $database;
+    }
+
+    /**
+     * Se encarga de realizar la consulta de un cliente en la base de datos.
+     * Se basa en un dato, que bien puede ser la cedula 
+     * o el nombre del cliente retorna un arreglo con la informacion respectiva.
+     */
+    public function consultar($dato) {
+
+        $consulta = sprintf("SELECT cliente.cedula, cliente.nombre, cliente.edad "
+                . "FROM cliente "
+                . "WHERE cliente.cedula LIKE '%%%s%%' "
+                . "OR cliente.nombre LIKE '%%%s%%' "
+                . "LIMIT 1", $dato, $dato);
+
+        return $this->database->consulta($consulta);
+    }
+
 }
