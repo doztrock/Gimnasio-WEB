@@ -27,4 +27,18 @@ class Cliente {
         return $this->database->consulta($consulta);
     }
 
+    /**
+     * Se encarga de realizar el almacenamiento de la informacion 
+     * del cliente en la base de datos.
+     */
+    public function registrar($cedula, $nombre, $genero, $tipoSangre, $edad, $telefono, $direccion, $eps) {
+
+        $consulta = sprintf("INSERT INTO cliente "
+                . "(cedula, nombre, genero, tipo_sangre, edad, direccion, telefono, eps) "
+                . "VALUES "
+                . "('%s', '%s', '%s', '%s', %d, '%s', '%s', '%s')", $cedula, $nombre, $genero, $tipoSangre, $edad, $telefono, $direccion, $eps);
+
+        return $this->database->consulta($consulta);
+    }
+
 }

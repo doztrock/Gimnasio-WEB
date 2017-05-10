@@ -40,6 +40,13 @@ class Libreria {
         return $this->cliente->consultar($dato);
     }
 
+    /**
+     * Registro de cliente
+     */
+    public function registrarCliente($cedula, $nombre, $genero, $tipoSangre, $edad, $telefono, $direccion, $eps) {
+        return $this->cliente->registrar($cedula, $nombre, $genero, $tipoSangre, $edad, $telefono, $direccion, $eps);
+    }
+
 }
 
 ?>
