@@ -9,7 +9,7 @@
                  */
                 $("#boton_registrar").click(function () {
 
-                    $("#div_cargando").show();
+                    $(".div_cargando").show();
 
                     $.ajax({
                         url: "proceso/InterfazRegistroRutina.process.php",
@@ -17,8 +17,8 @@
                         cache: false,
                         data: $('#formulario_registro_rutina').serialize(),
                         success: function (data) {
-                            alert(data);
-                            $("#div_cargando").hide();
+                            //alert(data);
+                            $(".div_cargando").hide();
                         }
                     });
 
@@ -36,6 +36,9 @@
                  */
                 $("#boton_buscar").click(function () {
 
+                    /* Mostramos la animacion de carga */
+                    $(".div_cargando").show();
+
                     $.ajax({
                         url: "proceso/BusquedaCliente.process.php",
                         type: "POST",
@@ -51,6 +54,9 @@
 
                             /* Guardamos el identificador */
                             $("#hidden_identificador_cliente").val(informacion.identificador);
+
+                            /* Ocultamos la animacion de carga */
+                            $(".div_cargando").hide();
 
                         }
                     });
@@ -159,8 +165,9 @@
                 <input type="button" class="boton_formulario_positivo" id="boton_registrar" name="boton_registrar" value="Registrar">
             </div>
 
-            <div id="div_cargando" style="display: none">
-                CARGANDO...
+            <div class="div_cargando">
+                <object data="img/cargando.svg" type="image/svg+xml">
+                </object>
             </div>
 
         </div>

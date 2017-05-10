@@ -9,6 +9,7 @@
                  */
                 $("#boton_registrar").click(function () {
 
+                    /* Mostramos la animacion de carga */
                     $(".div_cargando").show();
 
                     $.ajax({
@@ -17,8 +18,17 @@
                         cache: false,
                         data: $('#formulario_registro_cliente').serialize(),
                         success: function (data) {
-                            //alert(data);
+
+                            /** Mostramos el resultado */
+                            if (data.resultado === true) {
+                                alert("Cliente registrado exitosamente.");
+                            } else {
+                                alert("Ocurrio un error registrando el cliente.");
+                            }
+
+                            /* Ocultamos la animacion de carga */
                             $(".div_cargando").hide();
+
                         }
                     });
 
