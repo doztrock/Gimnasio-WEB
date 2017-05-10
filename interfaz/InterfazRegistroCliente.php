@@ -9,7 +9,7 @@
                  */
                 $("#boton_registrar").click(function () {
 
-                    $("#div_cargando").show();
+                    $(".div_cargando").show();
 
                     $.ajax({
                         url: "proceso/InterfazRegistroCliente.process.php",
@@ -17,8 +17,8 @@
                         cache: false,
                         data: $('#formulario_registro_cliente').serialize(),
                         success: function (data) {
-                            alert(data);
-                            $("#div_cargando").hide();
+                            //alert(data);
+                            $(".div_cargando").hide();
                         }
                     });
 
@@ -150,8 +150,9 @@
                 <input type="button" class="boton_formulario_positivo" id="boton_registrar" name="boton_registrar" value="Registrar">
             </div>
 
-            <div id="div_cargando" style="display: none">
-                CARGANDO...
+            <div class="div_cargando">
+                <object data="img/cargando.svg" type="image/svg+xml">
+                </object>
             </div>
 
         </div>

@@ -122,6 +122,19 @@ body{
     color: #BAB210 !important
 }
 
+/**
+  * DIVS
+  */
+
+/** 
+  * Div de carga que aparece en los formularios
+  */
+.div_cargando{
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: -465px;
+}
 
 
 /** 
