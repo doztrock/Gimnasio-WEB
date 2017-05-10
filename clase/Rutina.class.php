@@ -24,10 +24,15 @@ class Rutina {
     /**
      * Se encarga de realizar el almacenamiento de la informacion 
      * de la rutina en la base de datos.
-     * PENDIENTE
      */
     public function registrar($area, $peso, $series, $fecha, $identificadorCliente) {
-        return NULL;
+
+        $consulta = sprintf("INSERT INTO rutina "
+                . "(area, peso, series, fecha, id_cliente) "
+                . "VALUES "
+                . "('%s', %f, %d, '%s', %d)", $area, $peso, $series, $fecha, $identificadorCliente);
+
+        return $this->database->consulta($consulta);
     }
 
 }
