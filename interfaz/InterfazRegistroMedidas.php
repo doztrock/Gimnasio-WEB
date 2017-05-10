@@ -9,16 +9,19 @@
                  */
                 $("#boton_registrar").click(function () {
 
+                    /* Mostramos la animacion de carga */
                     $(".div_cargando").show();
 
                     $.ajax({
-                        url: "proceso/InterfazRegistroRutina.process.php",
+                        url: "proceso/InterfazRegistroMedidas.process.php",
                         type: "POST",
                         cache: false,
-                        data: $('#formulario_registro_rutina').serialize(),
+                        data: $('#formulario_registro_medidas').serialize(),
                         success: function (data) {
-                            //alert(data);
+
+                            /* Ocultamos la animacion de carga */
                             $(".div_cargando").hide();
+
                         }
                     });
 
@@ -63,13 +66,6 @@
 
                 });
 
-                /**
-                 * Datepicker
-                 */
-                $("#input_fecha").datepicker({
-                    dateFormat: 'yy-mm-dd'
-                });
-
             });
 
         </script>
@@ -78,7 +74,7 @@
 
         <!--Titulo-->
         <div class="contenedor_titulo_formulario">
-            <a class="titulo_formulario">Registrar Rutina</a>
+            <a class="titulo_formulario">Registrar Medidas</a>
         </div>
 
         <!--Buscador-->
@@ -105,13 +101,13 @@
         <!--Formulario-->
         <div class="contenedor_formulario">
 
-            <form id="formulario_registro_rutina">
+            <form id="formulario_registro_medidas">
 
                 <div>
 
                     <div>
                         <div class="caja_label_formulario">
-                            <label class="label_formulario">Area:</label>
+                            <label class="label_formulario">Peso:</label>
                         </div>
                         <div class="caja_input_formulario">
                             <input type="text" class="input_formulario" id="input_area" name="input_area">
@@ -120,28 +116,130 @@
 
                     <div>
                         <div class="caja_label_formulario">
-                            <label class="label_formulario">Peso:</label>
+                            <label class="label_formulario">Estatura:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_peso" name="input_peso">
+                            <input type="text" class="input_formulario" id="input_area" name="input_area">
                         </div>
                     </div>
 
                     <div>
                         <div class="caja_label_formulario">
-                            <label class="label_formulario">Series:</label>
+                            <label class="label_formulario">Cintura:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_series" name="input_series">
+                            <input type="text" class="input_formulario" id="input_area" name="input_area">
                         </div>
                     </div>
 
                     <div>
                         <div class="caja_label_formulario">
-                            <label class="label_formulario">Fecha:</label>
+                            <label class="label_formulario">Cadera:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_fecha" name="input_fecha">
+                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div style="display: table-cell">
+                            <div class="caja_label_formulario">
+                                <label class="label_formulario">Pierna Derecha:</label>
+                            </div>
+                            <div class="caja_input_formulario">
+                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            </div>
+                        </div>
+
+                        <div style="display: table-cell">
+                            <div class="caja_label_formulario">
+                                <label class="label_formulario">Pierna Izquierda:</label>
+                            </div>
+                            <div class="caja_input_formulario">
+                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <div style="display: table-cell">
+                            <div class="caja_label_formulario">
+                                <label class="label_formulario">Brazo Derecho:</label>
+                            </div>
+                            <div class="caja_input_formulario">
+                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            </div>
+                        </div>
+
+                        <div style="display: table-cell">
+                            <div class="caja_label_formulario">
+                                <label class="label_formulario">Brazo Izquierdo:</label>
+                            </div>
+                            <div class="caja_input_formulario">
+                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div class="caja_label_formulario">
+                            <label class="label_formulario">Gluteos:</label>
+                        </div>
+                        <div class="caja_input_formulario">
+                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div style="display: table-cell">
+                            <div class="caja_label_formulario">
+                                <label class="label_formulario">Gemelo Derecho:</label>
+                            </div>
+                            <div class="caja_input_formulario">
+                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            </div>
+                        </div>
+
+                        <div style="display: table-cell">
+                            <div class="caja_label_formulario">
+                                <label class="label_formulario">Gemelo Izquierdo:</label>
+                            </div>
+                            <div class="caja_input_formulario">
+                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div class="caja_label_formulario">
+                            <label class="label_formulario">Cuello:</label>
+                        </div>
+                        <div class="caja_input_formulario">
+                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="caja_label_formulario">
+                            <label class="label_formulario">Hombros:</label>
+                        </div>
+                        <div class="caja_input_formulario">
+                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="caja_label_formulario">
+                            <label class="label_formulario">Espalda:</label>
+                        </div>
+                        <div class="caja_input_formulario">
+                            <input type="text" class="input_formulario" id="input_area" name="input_area">
                         </div>
                     </div>
 
