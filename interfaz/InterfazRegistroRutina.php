@@ -35,7 +35,26 @@
                  *  Boton Buscar
                  */
                 $("#boton_buscar").click(function () {
-                    $("#contenedor").load("interfaz/InterfazGimnasio.php");
+
+                    $.ajax({
+                        url: "proceso/BusquedaCliente.process.php",
+                        type: "POST",
+                        cache: false,
+                        data: $('#input_busqueda').serialize(),
+                        success: function (data) {
+
+                            var informacion = data.informacion;
+
+                            /* Mostramos la informacion */
+                            $(".contenedor_seccion_resultado").show();
+                            $(".label_resultado_informacion").text(informacion.nombre);
+
+                            /* Guardamos el identificador */
+                            $("#hidden_identificador_cliente").val(informacion.identificador);
+
+                        }
+                    });
+
                 });
 
                 /**
@@ -62,7 +81,7 @@
             <!--Seccion de busqueda--> 
             <div class="contenedor_seccion_busqueda">
                 <div class="caja_input_busqueda">
-                    <input type="text" class="input_busqueda" placeholder="Ingrese cedula o nombre">
+                    <input type="text" class="input_busqueda" id="input_busqueda" name="input_busqueda" placeholder="Ingrese cedula o nombre">
                 </div>            
                 <div  class="caja_boton_busqueda">
                     <input type="button" class="boton_busqueda" id="boton_buscar" name="boton_buscar" value="Buscar">   

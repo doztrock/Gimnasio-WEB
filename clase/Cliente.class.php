@@ -18,13 +18,13 @@ class Cliente {
      */
     public function consultar($dato) {
 
-        $consulta = sprintf("SELECT cliente.cedula, cliente.nombre, cliente.edad "
+        $consulta = sprintf("SELECT cliente.identificador, cliente.cedula, cliente.nombre, cliente.edad "
                 . "FROM cliente "
                 . "WHERE cliente.cedula LIKE '%%%s%%' "
                 . "OR cliente.nombre LIKE '%%%s%%' "
                 . "LIMIT 1", $dato, $dato);
 
-        return $this->database->consulta($consulta);
+        return $this->database->consulta($consulta)[0];
     }
 
     /**
