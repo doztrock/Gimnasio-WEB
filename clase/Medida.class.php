@@ -1,0 +1,47 @@
+<?php
+
+require_once '../database/Database.class.php';
+
+class Medida {
+
+    /** Conexion a MySQL */
+    private $database = NULL;
+
+    public function __construct(Database $database) {
+        $this->database = $database;
+    }
+
+    /**
+     * Se encarga de realizar la consulta de un cliente en la base de datos.
+     * Se basa en un dato, que bien puede ser la cedula 
+     * o el nombre del cliente retorna un arreglo con la informacion respectiva.
+     * PENDIENTE
+     */
+    public function consultar($dato) {
+
+        $consulta = sprintf("SELECT cliente.identificador, cliente.cedula, cliente.nombre, cliente.edad "
+                . "FROM cliente "
+                . "WHERE cliente.cedula LIKE '%%%s%%' "
+                . "OR cliente.nombre LIKE '%%%s%%' "
+                . "LIMIT 1", $dato, $dato);
+
+        return $this->database->consulta($consulta)[0];
+    }
+
+    /**
+     * Se encarga de realizar el almacenamiento de la informacion 
+     * de la rutina en la base de datos.
+     */
+    public function registrar() {
+
+        $consulta = sprintf("INSERT INTO cliente "
+                . "(cedula, nombre, genero, tipo_sangre, edad, direccion, telefono, eps) "
+                . "VALUES "
+                . "('%s', '%s', '%s', '%s', %d, '%s', '%s', '%s')", $cedula, $nombre, $genero, $tipoSangre, $edad, $telefono, $direccion, $eps);
+
+        return $this->database->consulta($consulta);
+    }
+
+}
+
+?>

@@ -1,8 +1,6 @@
 <?php
 
 require_once '../clase/Cliente.class.php';
-require_once '../clase/Entrenador.class.php';
-require_once '../clase/Gimnasio.class.php';
 require_once '../clase/Medida.class.php';
 require_once '../clase/Rutina.class.php';
 require_once '../clase/Servicio.class.php';
@@ -15,6 +13,9 @@ class Libreria {
 
     /** Recursos */
     private $cliente = NULL;
+    private $medida = NULL;
+    private $rutina = NULL;
+    private $servicio = NULL;
 
     public function __construct(Database $database) {
 
@@ -23,6 +24,9 @@ class Libreria {
 
         /** Instanciamos los recursos */
         $this->cliente = new Cliente($this->database);
+        $this->medida = new Medida($this->database);
+        $this->rutina = new Rutina($this->database);
+        $this->servicio = new Servicio($this->database);
 
         return;
     }
@@ -47,6 +51,36 @@ class Libreria {
         return $this->cliente->registrar($cedula, $nombre, $genero, $tipoSangre, $edad, $telefono, $direccion, $eps);
     }
 
+    /**
+     * 
+     * MEDIDA
+     * 
+     */
+    /**
+     * 
+     * RUTINA
+     * 
+     */
+
+    /**
+     * Consulta de rutina
+     */
+    public function consultarRutina($identificadorCliente) {
+        return $this->rutina->consultar($identificadorCliente);
+    }
+
+    /**
+     * Registro de rutina
+     */
+    public function registrarRutina($area, $peso, $series, $fecha, $identificadorCliente) {
+        return $this->rutina->registrar($area, $peso, $series, $fecha, $identificadorCliente);
+    }
+
+    /**
+     * 
+     * SERVICIO
+     * 
+     */
 }
 
 ?>
