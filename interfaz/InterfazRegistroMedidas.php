@@ -9,16 +9,16 @@
                  */
                 $("#boton_registrar").click(function () {
 
-                    $("#div_cargando").show();
+                    $(".div_cargando").show();
 
                     $.ajax({
-                        url: "proceso/InterfazRegistroMedidas.process.php",
+                        url: "proceso/InterfazRegistroRutina.process.php",
                         type: "POST",
                         cache: false,
-                        data: $('#formulario_registro_medidas').serialize(),
+                        data: $('#formulario_registro_rutina').serialize(),
                         success: function (data) {
-                            alert(data);
-                            $("#div_cargando").hide();
+                            //alert(data);
+                            $(".div_cargando").hide();
                         }
                     });
 
@@ -35,7 +35,39 @@
                  *  Boton Buscar
                  */
                 $("#boton_buscar").click(function () {
-                    $("#contenedor").load("interfaz/InterfazGimnasio.php");
+
+                    /* Mostramos la animacion de carga */
+                    $(".div_cargando").show();
+
+                    $.ajax({
+                        url: "proceso/BusquedaCliente.process.php",
+                        type: "POST",
+                        cache: false,
+                        data: $('#input_busqueda').serialize(),
+                        success: function (data) {
+
+                            var informacion = data.informacion;
+
+                            /* Mostramos la informacion */
+                            $(".contenedor_seccion_resultado").show();
+                            $(".label_resultado_informacion").text(informacion.nombre);
+
+                            /* Guardamos el identificador */
+                            $("#hidden_identificador_cliente").val(informacion.identificador);
+
+                            /* Ocultamos la animacion de carga */
+                            $(".div_cargando").hide();
+
+                        }
+                    });
+
+                });
+
+                /**
+                 * Datepicker
+                 */
+                $("#input_fecha").datepicker({
+                    dateFormat: 'yy-mm-dd'
                 });
 
             });
@@ -46,7 +78,7 @@
 
         <!--Titulo-->
         <div class="contenedor_titulo_formulario">
-            <a class="titulo_formulario">Registrar Medidas</a>
+            <a class="titulo_formulario">Registrar Rutina</a>
         </div>
 
         <!--Buscador-->
@@ -55,7 +87,7 @@
             <!--Seccion de busqueda--> 
             <div class="contenedor_seccion_busqueda">
                 <div class="caja_input_busqueda">
-                    <input type="text" class="input_busqueda" placeholder="Ingrese cedula o nombre">
+                    <input type="text" class="input_busqueda" id="input_busqueda" name="input_busqueda" placeholder="Ingrese cedula o nombre">
                 </div>            
                 <div  class="caja_boton_busqueda">
                     <input type="button" class="boton_busqueda" id="boton_buscar" name="boton_buscar" value="Buscar">   
@@ -73,7 +105,7 @@
         <!--Formulario-->
         <div class="contenedor_formulario">
 
-            <form id="formulario_registro_medidas">
+            <form id="formulario_registro_rutina">
 
                 <div>
 
@@ -133,8 +165,9 @@
                 <input type="button" class="boton_formulario_positivo" id="boton_registrar" name="boton_registrar" value="Registrar">
             </div>
 
-            <div id="div_cargando" style="display: none">
-                CARGANDO...
+            <div class="div_cargando">
+                <object data="img/cargando.svg" type="image/svg+xml">
+                </object>
             </div>
 
         </div>
