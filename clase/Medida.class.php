@@ -17,7 +17,7 @@ class Medida {
      * o el nombre del cliente retorna un arreglo con la informacion respectiva.
      * PENDIENTE
      */
-    public function consultar($dato) {
+    public function consultar($identificadorCliente) {
         return NULL;
     }
 
@@ -27,10 +27,10 @@ class Medida {
      */
     public function registrar($peso, $estatura, $cintura, $cadera, $pierna_derecha, $pierna_izquierda, $brazo_derecho, $brazo_izquierdo, $gluteos, $gemelo_derecho, $gemelo_izquierdo, $cuello, $hombros, $espalda, $identificadorCliente) {
 
-        $consulta = sprintf("INSERT INTO cliente "
-                . "(cedula, nombre, genero, tipo_sangre, edad, direccion, telefono, eps) "
+        $consulta = sprintf("INSERT INTO medida "
+                . "(peso, estatura, talla_cintura, cadera, pierna_derecha, pierna_izquierda, brazo_derecho, brazo_izquierdo, gluteos, gemelo_derecho, gemelo_izquierdo, cuello, hombros, espalda, id_cliente) "
                 . "VALUES "
-                . "('%s', '%s', '%s', '%s', %d, '%s', '%s', '%s')", $cedula, $nombre, $genero, $tipoSangre, $edad, $telefono, $direccion, $eps);
+                . "(%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d)", $peso, $estatura, $cintura, $cadera, $pierna_derecha, $pierna_izquierda, $brazo_derecho, $brazo_izquierdo, $gluteos, $gemelo_derecho, $gemelo_izquierdo, $cuello, $hombros, $espalda, $identificadorCliente);
 
         return $this->database->consulta($consulta);
     }

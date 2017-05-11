@@ -19,6 +19,13 @@
                         data: $('#formulario_registro_medidas').serialize(),
                         success: function (data) {
 
+                            /** Mostramos el resultado */
+                            if (data.resultado === true) {
+                                alert("Medidas registradas exitosamente.");
+                            } else {
+                                alert("Ocurrio un error registrando las medidas.");
+                            }
+
                             /* Ocultamos la animacion de carga */
                             $(".div_cargando").hide();
 
