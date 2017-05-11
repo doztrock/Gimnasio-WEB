@@ -26,6 +26,13 @@
                         data: $('#input_busqueda').serialize(),
                         success: function (data) {
 
+                            /* Notificamos cuando no se encuentre el cliente */
+                            if (data.informacion === null) {
+                                alert("No se encontro el cliente.");
+                                $(".div_cargando_consulta").hide();
+                                return;
+                            }
+
                             var informacion = data.informacion;
                             var fila;
 
