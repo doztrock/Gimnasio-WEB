@@ -69,6 +69,20 @@ body{
 }
 
 /**
+  * Boton que se encuentra en el formulario indicando una accion 
+  * que retornara a la pantalla principal, se usara en los formularios
+  * que correspondan solo a la busqueda (Consulta de Cliente, Impresion de Rutina)
+  */
+.boton_formulario_volver{
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    background-color: #399C8E;
+    font-size: 20px;
+}
+
+/**
   * Labels 
   */
 
@@ -136,6 +150,17 @@ body{
     left: -465px;
 }
 
+/** 
+  * Div de carga que aparece en los formularios cuya funcion sea unicamente
+  * realizar una consulta y obviamente que en la parte inferior solo haya
+  * un boton para "Volver"
+  */
+.div_cargando_consulta {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: -785px;
+}
 
 /** 
   * INTERFAZ PRINCIPAL 
@@ -186,6 +211,12 @@ body{
 
 /* Contenedor de boton negativo */
 .contenedor_boton_negativo{
+    display: table-cell;
+    padding: 5px;
+}
+
+/* Contenedor de boton negativo */
+.contenedor_boton_volver{
     display: table-cell;
     padding: 5px;
 }
@@ -287,6 +318,32 @@ body{
     width: 120px;
 }
 
+/**
+  * Tabla de resultados
+  */
+
+/* Contenedor de la tabla de resultados */
+.contenedor_tabla_resultados{
+    position: absolute;
+    top: 190px;
+    left: 30px;
+}
+
+/* Tabla de resultados */
+#tabla_resultados{
+    width: 46%;
+    position: fixed;
+}
+
+/* Titulo de la barra de encabezado */
+#tabla_resultados .encabezado_resultados {
+    color: #C9C9C9;
+}
+
+/* Fila que contiene el resultado */
+#tabla_resultados .fila_resultado {
+    color: #56BF71;
+}
 
 /**
   * Buscador

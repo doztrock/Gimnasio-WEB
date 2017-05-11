@@ -18,7 +18,7 @@ class Cliente {
      */
     public function consultar($dato) {
 
-        $consulta = sprintf("SELECT cliente.identificador, cliente.cedula, cliente.nombre, cliente.edad "
+        $consulta = sprintf("SELECT * "
                 . "FROM cliente "
                 . "WHERE cliente.cedula LIKE '%%%s%%' "
                 . "OR cliente.nombre LIKE '%%%s%%' "
