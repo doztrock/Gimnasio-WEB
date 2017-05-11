@@ -18,21 +18,14 @@ class Medida {
      * PENDIENTE
      */
     public function consultar($dato) {
-
-        $consulta = sprintf("SELECT cliente.identificador, cliente.cedula, cliente.nombre, cliente.edad "
-                . "FROM cliente "
-                . "WHERE cliente.cedula LIKE '%%%s%%' "
-                . "OR cliente.nombre LIKE '%%%s%%' "
-                . "LIMIT 1", $dato, $dato);
-
-        return $this->database->consulta($consulta)[0];
+        return NULL;
     }
 
     /**
      * Se encarga de realizar el almacenamiento de la informacion 
-     * de la rutina en la base de datos.
+     * de las medidas en la base de datos.
      */
-    public function registrar() {
+    public function registrar($peso, $estatura, $cintura, $cadera, $pierna_derecha, $pierna_izquierda, $brazo_derecho, $brazo_izquierdo, $gluteos, $gemelo_derecho, $gemelo_izquierdo, $cuello, $hombros, $espalda, $identificadorCliente) {
 
         $consulta = sprintf("INSERT INTO cliente "
                 . "(cedula, nombre, genero, tipo_sangre, edad, direccion, telefono, eps) "

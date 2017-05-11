@@ -56,6 +56,21 @@ class Libreria {
      * MEDIDA
      * 
      */
+
+    /**
+     * Consulta de medidas
+     */
+    public function consultarMedidas($identificadorCliente) {
+        return $this->medida->consultar($identificadorCliente);
+    }
+
+    /**
+     * Registro de medidas
+     */
+    public function registrarMedidas($peso, $estatura, $cintura, $cadera, $pierna_derecha, $pierna_izquierda, $brazo_derecho, $brazo_izquierdo, $gluteos, $gemelo_derecho, $gemelo_izquierdo, $cuello, $hombros, $espalda, $identificadorCliente) {
+        return $this->medida->registrar($peso, $estatura, $cintura, $cadera, $pierna_derecha, $pierna_izquierda, $brazo_derecho, $brazo_izquierdo, $gluteos, $gemelo_derecho, $gemelo_izquierdo, $cuello, $hombros, $espalda, $identificadorCliente);
+    }
+
     /**
      * 
      * RUTINA

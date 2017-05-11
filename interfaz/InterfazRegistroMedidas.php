@@ -110,7 +110,7 @@
                             <label class="label_formulario">Peso:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            <input type="text" class="input_formulario" id="input_peso" name="input_peso">
                         </div>
                     </div>
 
@@ -119,7 +119,7 @@
                             <label class="label_formulario">Estatura:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            <input type="text" class="input_formulario" id="input_estatura" name="input_estatura">
                         </div>
                     </div>
 
@@ -128,7 +128,7 @@
                             <label class="label_formulario">Cintura:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            <input type="text" class="input_formulario" id="input_cintura" name="input_cintura">
                         </div>
                     </div>
 
@@ -137,7 +137,7 @@
                             <label class="label_formulario">Cadera:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            <input type="text" class="input_formulario" id="input_cadera" name="input_cadera">
                         </div>
                     </div>
 
@@ -148,7 +148,7 @@
                                 <label class="label_formulario">Pierna Derecha:</label>
                             </div>
                             <div class="caja_input_formulario">
-                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                                <input type="text" class="input_formulario" id="input_pierna_derecha" name="input_pierna_derecha">
                             </div>
                         </div>
 
@@ -157,7 +157,7 @@
                                 <label class="label_formulario">Pierna Izquierda:</label>
                             </div>
                             <div class="caja_input_formulario">
-                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                                <input type="text" class="input_formulario" id="input_pierna_izquierda" name="input_pierna_izquierda">
                             </div>
                         </div>
 
@@ -170,7 +170,7 @@
                                 <label class="label_formulario">Brazo Derecho:</label>
                             </div>
                             <div class="caja_input_formulario">
-                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                                <input type="text" class="input_formulario" id="input_brazo_derecho" name="input_brazo_derecho">
                             </div>
                         </div>
 
@@ -179,7 +179,7 @@
                                 <label class="label_formulario">Brazo Izquierdo:</label>
                             </div>
                             <div class="caja_input_formulario">
-                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                                <input type="text" class="input_formulario" id="input_brazo_izquierdo" name="input_brazo_izquierdo">
                             </div>
                         </div>
 
@@ -190,7 +190,7 @@
                             <label class="label_formulario">Gluteos:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            <input type="text" class="input_formulario" id="input_gluteos" name="input_gluteos">
                         </div>
                     </div>
 
@@ -201,7 +201,7 @@
                                 <label class="label_formulario">Gemelo Derecho:</label>
                             </div>
                             <div class="caja_input_formulario">
-                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                                <input type="text" class="input_formulario" id="input_gemelo_derecho" name="input_gemelo_derecho">
                             </div>
                         </div>
 
@@ -210,7 +210,7 @@
                                 <label class="label_formulario">Gemelo Izquierdo:</label>
                             </div>
                             <div class="caja_input_formulario">
-                                <input type="text" class="input_formulario" id="input_area" name="input_area">
+                                <input type="text" class="input_formulario" id="input_gemelo_izquierdo" name="input_gemelo_izquierdo">
                             </div>
                         </div>
 
@@ -221,7 +221,7 @@
                             <label class="label_formulario">Cuello:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            <input type="text" class="input_formulario" id="input_cuello" name="input_cuello">
                         </div>
                     </div>
 
@@ -230,7 +230,7 @@
                             <label class="label_formulario">Hombros:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            <input type="text" class="input_formulario" id="input_hombros" name="input_hombros">
                         </div>
                     </div>
 
@@ -239,7 +239,7 @@
                             <label class="label_formulario">Espalda:</label>
                         </div>
                         <div class="caja_input_formulario">
-                            <input type="text" class="input_formulario" id="input_area" name="input_area">
+                            <input type="text" class="input_formulario" id="input_espalda" name="input_espalda">
                         </div>
                     </div>
 
