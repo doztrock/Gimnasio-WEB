@@ -39,6 +39,41 @@
                             $(".contenedor_seccion_resultado").show();
                             $(".label_resultado_informacion").text(informacion.nombre);
 
+                            /* Guardamos el identificador */
+                            $("#hidden_identificador_cliente").val(informacion.identificador);
+
+                            /* Consultamos la Rutina */
+                            $.ajax({
+                                url: "proceso/BusquedaRutina.process.php",
+                                type: "POST",
+                                cache: false,
+                                data: $('#hidden_identificador_cliente').serialize(),
+                                success: function (data) {
+
+                                    /* Notificamos cuando no se encuentre la rutina */
+                                    if (data.informacion.length === 0) {
+                                        alert("No se encontraron rutinas.");
+                                        $(".div_cargando_consulta").hide();
+                                        return;
+                                    }
+
+                                    var informacion = data.informacion;
+                                    var fila;
+
+                                    for (i = 0; i < informacion.length; i++) {
+
+                                        /* Creamos la fila */
+                                        fila = "<tr class='fila_resultado'><td>" + informacion[i].area + "</td><td>" + informacion[i].peso + "</td><td>" + informacion[i].series + "</td><td>" + informacion[i].fecha + "</td></tr>";
+
+                                        /* Mostramos la informacion */
+                                        $("#tabla_resultados").append(fila);
+
+                                    }
+
+                                }
+
+                            });
+
                             /* Ocultamos la animacion de carga */
                             $(".div_cargando_consulta").hide();
 
@@ -82,6 +117,7 @@
 
         <!--Listado de resultados-->
         <div class="contenedor_tabla_resultados">
+
             <table border="1" id="tabla_resultados">
                 <thead>
                     <tr class="encabezado_resultados">
@@ -91,7 +127,11 @@
                         <th>Fecha</th>
                     </tr>  
                 </thead>            
-            </table>        
+            </table>  
+
+            <!--Identificador de Cliente-->
+            <input type="hidden" id="hidden_identificador_cliente" name="hidden_identificador_cliente">
+
         </div>
 
         <!--Botones-->

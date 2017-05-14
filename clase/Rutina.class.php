@@ -12,13 +12,17 @@ class Rutina {
     }
 
     /**
-     * Se encarga de realizar la consulta de un cliente en la base de datos.
-     * Se basa en un dato, que bien puede ser la cedula 
-     * o el nombre del cliente retorna un arreglo con la informacion respectiva.
-     * PENDIENTE
+     * Se encarga de realizar la consulta de una rutina en la base de datos.
+     * Se basa en un dato, que en este caso es el identificador del cliente
+     * y retorna un arreglo con la informacion respectiva.     
      */
     public function consultar($identificadorCliente) {
-        return NULL;
+
+        $consulta = sprintf("SELECT area, peso, series, fecha "
+                . "FROM rutina "
+                . "WHERE id_cliente = %d", $identificadorCliente);
+
+        return $this->database->consulta($consulta);
     }
 
     /**
