@@ -92,6 +92,20 @@ class Libreria {
     }
 
     /**
+     * Modificacion de rutina
+     */
+    public function modificarRutina($area, $peso, $series, $fecha, $identificadorRutina) {
+        return $this->rutina->modificar($area, $peso, $series, $fecha, $identificadorRutina);
+    }
+
+    /**
+     * Eliminacion de rutina
+     */
+    public function eliminarRutina($identificadorRutina) {
+        return $this->rutina->eliminar($identificadorRutina);
+    }
+
+    /**
      * 
      * SERVICIO
      * 

@@ -18,7 +18,7 @@ class Rutina {
      */
     public function consultar($identificadorCliente) {
 
-        $consulta = sprintf("SELECT area, peso, series, fecha "
+        $consulta = sprintf("SELECT identificador, area, peso, series, fecha "
                 . "FROM rutina "
                 . "WHERE id_cliente = %d", $identificadorCliente);
 
@@ -35,6 +35,33 @@ class Rutina {
                 . "(area, peso, series, fecha, id_cliente) "
                 . "VALUES "
                 . "('%s', %f, %d, '%s', %d)", $area, $peso, $series, $fecha, $identificadorCliente);
+
+        return $this->database->consulta($consulta);
+    }
+
+    /**
+     * Se encarga de realizar la modificacion de la informacion 
+     * de la rutina en la base de datos.
+     */
+    public function modificar($area, $peso, $series, $fecha, $identificadorRutina) {
+
+        $consulta = sprintf("UPDATE rutina "
+                . "SET "
+                . "area = '%s', peso = %f, series = %d, fecha = '%s' "
+                . "WHERE "
+                . "identificador = %d", $area, $peso, $series, $fecha, $identificadorRutina);
+
+        return $this->database->consulta($consulta);
+    }
+
+    /**
+     * Se encarga de realizar la eliminacion de la informacion 
+     * de la rutina en la base de datos.
+     */
+    public function eliminar($identificadorRutina) {
+
+        $consulta = sprintf("DELETE FROM rutina "
+                . "WHERE identificador = %d", $identificadorRutina);
 
         return $this->database->consulta($consulta);
     }
