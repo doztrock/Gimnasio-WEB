@@ -25,34 +25,77 @@ if (filter_input(INPUT_POST, "identificador_rutina") != NULL) {
 
             $(document).ready(function () {
 
-                /**
-                 * Boton Registrar
-                 */
-                $("#boton_registrar").click(function () {
+<?php
+/* Cambiamos el controlador del boton */
+if (filter_input(INPUT_POST, "identificador_rutina") == NULL) {
+    ?>
 
-                    /* Mostramos la animacion de carga */
-                    $(".div_cargando").show();
-                    $.ajax({
-                        url: "proceso/InterfazRegistroRutina.process.php",
-                        type: "POST",
-                        cache: false,
-                        data: $('#formulario_registro_rutina').serialize(),
-                        success: function (data) {
+                    /**
+                     * Boton Registrar
+                     */
+                    $("#boton_registrar").click(function () {
 
-                            /** Mostramos el resultado */
-                            if (data.resultado === true) {
-                                alert("Rutina asignada exitosamente.");
-                            } else {
-                                alert("Ocurrio un error asignando la rutina.");
+                        /* Mostramos la animacion de carga */
+                        $(".div_cargando").show();
+                        $.ajax({
+                            url: "proceso/InterfazRegistroRutina.process.php",
+                            type: "POST",
+                            cache: false,
+                            data: $('#formulario_registro_rutina').serialize(),
+                            success: function (data) {
+
+                                /** Mostramos el resultado */
+                                if (data.resultado === true) {
+                                    alert("Rutina asignada exitosamente.");
+                                } else {
+                                    alert("Ocurrio un error asignando la rutina.");
+                                }
+
+                                /* Ocultamos la animacion de carga */
+                                $(".div_cargando").hide();
+
                             }
+                        });
 
-                            /* Ocultamos la animacion de carga */
-                            $(".div_cargando").hide();
-
-                        }
                     });
 
-                });
+    <?php
+} else {
+    ?>
+
+                    /**
+                     * Boton Guardar
+                     */
+                    $("#boton_registrar").click(function () {
+
+                        /* Mostramos la animacion de carga */
+                        $(".div_cargando").show();
+                        $.ajax({
+                            url: "proceso/InterfazModificacionRutina.process.php",
+                            type: "POST",
+                            cache: false,
+                            data: $('#formulario_registro_rutina').serialize(),
+                            success: function (data) {
+
+                                /** Mostramos el resultado */
+                                if (data.resultado === true) {
+                                    alert("Rutina modificada exitosamente.");
+                                } else {
+                                    alert("Ocurrio un error asignando la rutina.");
+                                }
+
+                                /* Ocultamos la animacion de carga */
+                                $(".div_cargando").hide();
+
+                            }
+                        });
+
+                    });
+
+    <?php
+}
+?>
+
 
                 /**
                  * Boton Cancelar
@@ -206,12 +249,10 @@ if (filter_input(INPUT_POST, "identificador_rutina") != NULL) {
                     /** Cambiamos la informacion */
                     if (filter_input(INPUT_POST, "identificador_rutina") != NULL) {
                         ?>
-                        <input type="hidden" id="hidden_accion" name="hidden_accion" value="modificar">
                         <input type="hidden" id="hidden_identificador_rutina" name="hidden_identificador_rutina" value="<?php print $informacionRutina['identificador']; ?>">
                         <?php
                     } else {
                         ?>
-                        <input type="hidden" id="hidden_accion" name="hidden_accion" value="registrar">
                         <input type="hidden" id="hidden_identificador_cliente" name="hidden_identificador_cliente">
                         <?php
                     }
