@@ -46,7 +46,7 @@
 
                         /** Mostramos el resultado */
                         if (data.resultado === true) {
-                            $("#tabla_resultados").find("tr:gt(0)").remove();
+                            $("#fila_" + identificador).remove();
                         } else {
                             alert("Ocurrio un error eliminando la rutina.");
                         }
@@ -120,7 +120,7 @@
                                     for (i = 0; i < informacion.length; i++) {
 
                                         /* Creamos la fila */
-                                        fila = "<tr class='fila_resultado'><td>" + informacion[i].area + "</td><td>" + informacion[i].peso + "</td><td>" + informacion[i].series + "</td><td>" + informacion[i].fecha + "</td><td><input type='button' id='btn_modificar_rutina' name='" + informacion[i].identificador + "' onclick='modificarRutina(this.name)' value='Editar'><input type='button' id='btn_eliminar_rutina' name='" + informacion[i].identificador + "' onclick='eliminarRutina(this.name)' value='Eliminar'></td></tr>";
+                                        fila = "<tr id='fila_" + informacion[i].identificador + "' class='fila_resultado'><td>" + informacion[i].area + "</td><td>" + informacion[i].peso + "</td><td>" + informacion[i].series + "</td><td>" + informacion[i].fecha + "</td><td><input type='button' id='btn_modificar_rutina' name='" + informacion[i].identificador + "' onclick='modificarRutina(this.name)' value='Editar'><input type='button' id='btn_eliminar_rutina' name='" + informacion[i].identificador + "' onclick='eliminarRutina(this.name)' value='Eliminar'></td></tr>";
 
                                         /* Mostramos la informacion */
                                         $("#tabla_resultados").append(fila);
