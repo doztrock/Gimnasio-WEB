@@ -83,6 +83,36 @@ body{
 }
 
 /**
+  * Boton que se encuentra en el formulario indicando una accion 
+  * que corresponde a la modificacion de un elemento.
+  */
+.boton_formulario_modificar{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    background: url(../img/icono-modificar.png);
+    background-repeat: no-repeat;
+    font-size: 20px;
+    background-position: center;
+}
+
+/**
+  * Boton que se encuentra en el formulario indicando una accion 
+  * que corresponde a la eliminacion de un elemento.
+  */
+.boton_formulario_eliminar{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    background: url(../img/icono-eliminar.png);
+    background-repeat: no-repeat;
+    font-size: 20px;
+    background-position: center;
+}
+
+/**
   * Labels 
   */
 

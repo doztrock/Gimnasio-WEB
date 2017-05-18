@@ -111,7 +111,7 @@
                                     for (i = 0; i < informacion.length; i++) {
 
                                         /* Creamos la fila */
-                                        fila = "<tr id='fila_" + informacion[i].identificador + "' class='fila_resultado'><td>" + informacion[i].area + "</td><td>" + informacion[i].peso + "</td><td>" + informacion[i].series + "</td><td>" + informacion[i].fecha + "</td><td><input type='button' id='btn_modificar_rutina' name='" + informacion[i].identificador + "' onclick='modificarRutina(this.name)' value='Editar'><input type='button' id='btn_eliminar_rutina' name='" + informacion[i].identificador + "' onclick='eliminarRutina(this.name)' value='Eliminar'></td></tr>";
+                                        fila = "<tr id='fila_" + informacion[i].identificador + "' class='fila_resultado'><td>" + informacion[i].area + "</td><td>" + informacion[i].peso + "</td><td>" + informacion[i].series + "</td><td>" + informacion[i].fecha + "</td><td><input type='button' class='boton_formulario_modificar' id='boton_modificacion_rutina' name='" + informacion[i].identificador + "' onclick='modificarRutina(this.name)'><input type='button' class='boton_formulario_eliminar' id='boton_eliminacion_rutina' name='" + informacion[i].identificador + "' onclick='eliminarRutina(this.name)'></td></tr>";
 
                                         /* Mostramos la informacion */
                                         $("#tabla_resultados").append(fila);
