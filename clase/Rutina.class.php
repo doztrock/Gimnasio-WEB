@@ -26,6 +26,20 @@ class Rutina {
     }
 
     /**
+     * Se encarga de realizar la consulta de una rutina en la base de datos.
+     * Se basa en un dato, que en este caso es el identificador de la rutina
+     * y retorna un arreglo con la informacion respectiva.     
+     */
+    public function obtener($identificadorRutina) {
+
+        $consulta = sprintf("SELECT identificador, area, peso, series, fecha "
+                . "FROM rutina "
+                . "WHERE identificador = %d", $identificadorRutina);
+
+        return $this->database->consulta($consulta);
+    }
+
+    /**
      * Se encarga de realizar el almacenamiento de la informacion 
      * de la rutina en la base de datos.
      */

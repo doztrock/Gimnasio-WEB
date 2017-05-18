@@ -4,27 +4,18 @@
 
             /**
              * Boton Modificar Rutina
-             * @param {Entero} identificadorRutina Identificador de la rutina a modificar
+             * @param {Entero} identificador Identificador de la rutina a modificar
              */
-            function modificarRutina(identificadorRutina) {
-
-                alert(identificadorRutina);
+            function modificarRutina(identificador) {
 
                 /* Mostramos la animacion de carga */
                 $(".div_cargando_consulta").show();
 
-                $.ajax({
-                    url: "proceso/BusquedaCliente.process.php",
-                    type: "POST",
-                    cache: false,
-                    data: $('#input_busqueda').serialize(),
-                    success: function (data) {
+                /* Cargamos el formulario de Insercion */
+                $("#contenedor").load("interfaz/InterfazRegistroRutina.php", {identificador_rutina: identificador});
 
-                        /* Ocultamos la animacion de carga */
-                        $(".div_cargando_consulta").hide();
-
-                    }
-                });
+                /* Ocultamos la animacion de carga */
+                $(".div_cargando_consulta").hide();
 
             }
 

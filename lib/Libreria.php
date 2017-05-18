@@ -85,6 +85,13 @@ class Libreria {
     }
 
     /**
+     * Obtencion de rutina
+     */
+    public function obtenerRutina($identificadorRutina) {
+        return $this->rutina->obtener($identificadorRutina);
+    }
+
+    /**
      * Registro de rutina
      */
     public function registrarRutina($area, $peso, $series, $fecha, $identificadorCliente) {
